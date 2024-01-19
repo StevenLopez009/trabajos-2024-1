@@ -1,0 +1,30 @@
+<?php
+$inc = include("con_db.php");
+if ($inc) {
+    $consulta = "SELECT * FROM datos";
+    $resultado = mysqli_query($conex, $consulta);
+    if ($resultado) {
+        while ($row = $resultado->fetch_array()) {
+            $id = $row['id'];
+            $nombre = $row['nombre'];
+            $email = $row['email'];
+            $telefono = $row['telefono'];
+            $interes=$row['interes'];
+?>
+            <div class="mostrarRegistros">
+              <h2>Clientes Interesados</h2>
+                <div>
+                    <p>
+                        <b>ID: </b><?php echo $id; ?><br>
+                        <b>NOMBRE: </b><?php echo $nombre; ?><br>
+                        <b>EMAIL: </b><?php echo $email; ?><br>
+                        <b>TELEFONO: </b><?php echo $telefono; ?><br>
+                        <b>CASA DE INTERES: </b><?php echo $interes; ?><br>
+                    </p>
+                </div>
+            </div>
+<?php
+        }
+    }
+}
+?>

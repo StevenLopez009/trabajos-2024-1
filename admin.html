@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/styles.css" />
+    <link rel="icon" href="img/iconos.jpg" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="encabezado">
+      <h2>Django administration</h2>
+      <h4>Welcome ADMIN</h4>
+    </div>
+    <section class="seccion-principal">
+      <section class="seccionCrear">
+        <div class="contentForm">
+          <form action="" class="formCreate">
+            <input
+              type="text"
+              name="nombre"
+              class="input-name"
+              placeholder="Nombre casa"
+            />
+            <input
+              type="text"
+              name="imagen1"
+              class="img1"
+              placeholder="Imagen principal"
+            />
+            <input
+              type="text"
+              name="imagen2"
+              class="img2"
+              placeholder="Imagen 2"
+            />
+            <input
+              type="text"
+              name="imagen3"
+              class="img3"
+              placeholder="Imagen 3"
+            />
+            <input
+              type="text"
+              name="imagen4"
+              class="img4"
+              placeholder="Imagen 4"
+            />
+            <input
+              type="text"
+              name="descripcion"
+              class="descrip"
+              placeholder="Descripcion de la casa"
+            />
+            <label for="numeroCuartos">Numero de Cuartos</label>
+            <select id="numero" name="numeroCuartos" class="cuartos">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <label for="numeroBaños">Numero de Baños</label>
+            <select id="numero" name="numeroBaños" class="baños" place>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <input
+              type="text"
+              name="precio"
+              class="precio"
+              placeholder="Precio"
+            />
+            <input type="submit" class="btnCrear" value="Save" />
+            <input type="submit" class="btnSaveEdit" value="Save Edit" id="" />
+            <input type="hidden" name="id" class="inputHiden" />
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="tabla-crud">
+          <table class="table-items">
+            <tr>
+              <td>items</td>
+              <td>Edit</td>
+              <td>Delete</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+    </section>
+    <?php
+    include("mostrar.php");
+    ?>
+    <script type="module" src="crud.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

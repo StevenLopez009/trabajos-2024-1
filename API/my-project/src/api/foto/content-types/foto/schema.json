@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fotos",
+  "info": {
+    "singularName": "foto",
+    "pluralName": "fotos",
+    "displayName": "api",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "foto_principal": {
+      "type": "string"
+    },
+    "precio": {
+      "type": "biginteger"
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "cuartos": {
+      "type": "integer"
+    },
+    "sanitarios": {
+      "type": "integer"
+    },
+    "foto_secundaria": {
+      "type": "string"
+    },
+    "foto_terciaria": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "foto_cuarta": {
+      "type": "string"
+    }
+  }
+}
